@@ -10,7 +10,7 @@ import { Contact } from "./pages/contact/contact";
 function App() {
   const Layout = () => {
     return (
-      <div className="main">
+      <div className="main flex flex-col min-h-screen">
         <Header />
         <Outlet />
         <Footer />
