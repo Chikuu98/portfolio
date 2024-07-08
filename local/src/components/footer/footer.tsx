@@ -23,8 +23,8 @@ export const Footer = () => {
               <hr className="border-t-1 border-[#0277BD] opacity-20 w-[50px] pb-2" />
               <h3 className="text-[#01579B] text-base font-normal pb-2">Web Development</h3>
               <h3 className="text-[#01579B] text-base font-normal pb-2">Mobile Development</h3>
-              <h3 className="text-[#01579B] text-base font-normal pb-2">Software Testing</h3>
-              <h3 className="text-[#01579B] text-base font-normal pb-2">Consulting</h3>
+              <h3 className="text-[#01579B] text-base font-normal pb-2">Desktop Application Development</h3>
+              <h3 className="text-[#01579B] text-base font-normal pb-2">UI UX Design</h3>
             </div>
           </div>
           <div>
@@ -44,10 +44,11 @@ export const Footer = () => {
             <div className="w-full pl-0 md:pl-5 lg:pl-20">
               <div className="md:absolute md:bottom-0">
                 <h3 className="text-[#01579B] text-base font-medium pb-1">
-                  E: chiran.jeewantha@example.com
+                  E: chiranjonline@gmail.com
+                  .com
                 </h3>
                 <h3 className="text-[#01579B] text-base font-medium">
-                  T: +94 758 43 7777
+                  T: +94 77 9980 990
                 </h3>
                 <h3 className="text-[#01579B] text-sm font-normal pb-1">
                   Copyright © {new Date().getFullYear()} Chiran Jeewantha
