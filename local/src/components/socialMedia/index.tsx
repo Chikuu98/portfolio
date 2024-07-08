@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import {
-  Facebook,
   Instagram,
   Linkedin,
   Threads,
@@ -10,22 +9,17 @@ import {
 
 const socialMediaLinks = [
   {
-    url: "https://www.linkedin.com/company/waverista",
+    url: "https://www.linkedin.com/in/chiranj98/",
     icon: Linkedin,
     alt: "Linkedin",
   },
   {
-    url: "https://www.instagram.com/waverista",
+    url: "https://www.instagram.com/chikuz98/",
     icon: Instagram,
     alt: "Instagram",
   },
-  {
-    url: "https://www.facebook.com/waveristafb",
-    icon: Facebook,
-    alt: "Facebook",
-  },
-  { url: "https://www.threads.net/@waverista", icon: Threads, alt: "Threads" },
-  { url: "https://youtube.com/@waverista", icon: Youtube, alt: "Youtube" },
+  { url: "https://www.threads.net/@chikuz98", icon: Threads, alt: "Threads" },
+  { url: "https://www.youtube.com/@ChiranJ", icon: Youtube, alt: "Youtube" },
 ];
 interface SocialMediaProps {
   className?: string;
