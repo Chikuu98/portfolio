@@ -386,12 +386,12 @@ export const About = () => {
           out if you have any questions or if you'd like to work together.
         </p>
         <div className="mt-5">
-        <Link
-              to="/sendMail"
-              className="bg-accent text-white px-6 py-2 rounded-lg hover:bg-primary transition-colors font-medium text-xl"
-            >
-              Contact Me
-            </Link>
+          <Link
+            to="/sendMail"
+            className="bg-accent text-white px-6 py-2 rounded-lg hover:bg-primary transition-colors font-medium text-xl animate-ripple"
+          >
+            Contact Me
+          </Link>
         </div>
       </section>
     </div>
