@@ -14,7 +14,7 @@ const socialMediaLinks = [
     alt: "Linkedin",
   },
   {
-    url: "https://www.instagram.com/chikuz98/",
+    url: "https://www.instagram.com/chikuzgram/",
     icon: Instagram,
     alt: "Instagram",
   },

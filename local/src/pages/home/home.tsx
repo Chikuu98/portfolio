@@ -1,23 +1,26 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import DownloadCVButton from "../../components/Buttons/DownloadCVButton";
 
 export const Home = () => {
   return (
     <div className="bg-background min-h-screen text-text font-poppins">
       {/* Hero Section */}
-      <section className="bg-primary text-text py-20 px-10">
+      <section className="bg-primary-hover text-text py-20 px-10">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-extrabold text-white">
             Welcome to My Portfolio
           </h1>
           <p className="text-lg md:text-xl text-text my-10">
-            I am <span className='font-extrabold'>Chiran Jeewantha</span>, a passionate software engineer.
+            I am <span className="font-extrabold">Chiran Jeewantha</span>, a
+            passionate software engineer.
           </p>
           <Link
             to="/about"
-            className="text-secondary hover:text-secondary-hover text-lg font-medium border-b-2 border-primary pb-1 mt-2 inline-block"
+            className="text-primary hover:text-secondary-hover text-lg font-bold italic border-b-2 border-primary pb-1 mt-2 inline-block"
           >
-            Learn More About Me
+            {">>>"} Learn more about me {">>>"}
           </Link>
+          <DownloadCVButton />
         </div>
       </section>
 
@@ -25,8 +28,15 @@ export const Home = () => {
       <section id="about" className="bg-background-alt py-20 px-10">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-semibold text-primary">About Me</h2>
-          <p className="text-lg text-text my-6 max-w-3xl mx-auto">
-            I specialize in web and mobile development with a focus on creating seamless and intuitive user experiences. With a background in computer science and a passion for technology, I am always excited to take on new challenges and push the limits of what’s possible.
+          <p className="text-lg text-text my-6 max-w-3xl mx-auto text-justify">
+            &nbsp;&nbsp;&nbsp;&nbsp;I'm specialize in software development with
+            a mainly focus on web applications, aiming to deliver seamless,
+            scalable, and intuitive user experiences. With a strong foundation
+            in Information Technology and hands-on experience with technologies
+            like Laravel, React, NestJS, SQL and Mongo, I am passionate about
+            creating innovative solutions. I am always eager to tackle new
+            challenges and continuously enhance my skills in development, team
+            collaboration, and system optimization.
           </p>
           <div className="flex justify-center gap-6 mt-6">
             <Link
@@ -52,15 +62,29 @@ export const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
             <div className="bg-neutral text-white p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold mb-4">Web Development</h3>
-              <p>Building responsive and interactive websites tailored to your needs.</p>
+              <p>
+                Creating responsive, scalable, and high-performance web
+                applications using technologies like React, HTML, CSS, and SQL
+                to meet modern web standards.
+              </p>
             </div>
             <div className="bg-neutral text-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">Mobile Development</h3>
-              <p>Creating engaging mobile apps for both Android and iOS platforms.</p>
+              <h3 className="text-2xl font-semibold mb-4">
+                Desktop Applications
+              </h3>
+              <p>
+                Building cross-platform desktop applications using Electron.js
+                to deliver seamless user experiences and high-performance
+                solutions.
+              </p>
             </div>
             <div className="bg-neutral text-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">UI/UX Design</h3>
-              <p>Designing intuitive and user-friendly interfaces that engage users.</p>
+              <h3 className="text-2xl font-semibold mb-4">RESTful APIs</h3>
+              <p>
+                Designing and developing robust RESTful APIs using NestJS,
+                focusing on scalability, performance, and ease of integration
+                with frontend and third-party services.
+              </p>
             </div>
           </div>
         </div>
