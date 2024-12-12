@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import DownloadCVButton from "../../components/Buttons/DownloadCVButton";
+import { motion } from "framer-motion";
 
 export const Home = () => {
   return (
@@ -16,18 +17,33 @@ export const Home = () => {
             />
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold text-white">
-            Welcome to My Portfolio
+            <span className="block md:hidden">WELCOME</span>{" "}
+            {/* Visible only on mobile */}
+            <span className="hidden md:block">
+              Welcome to My Portfolio
+            </span>{" "}
+            {/* Visible on larger screens */}
           </h1>
+
           <p className="text-lg md:text-xl text-text my-10">
             I am <span className="font-extrabold">Chiran Jeewantha</span>, a
             passionate software engineer.
           </p>
-          <Link
-            to="/about"
-            className="text-primary hover:text-secondary-hover text-lg font-bold italic border-b-2 border-primary pb-1 mt-2 inline-block"
+          <motion.div
+            animate={{ x: [-10, 10, -10] }}
+            transition={{
+              duration: 2, 
+              repeat: Infinity, 
+              ease: "easeInOut", 
+            }}
           >
-            {">>>"} Learn more about me {">>>"}
-          </Link>
+            <Link
+              to="/about"
+              className="text-primary hover:text-secondary-hover text-lg font-bold italic  pb-1 mt-2 inline-block"
+            >
+              {">>>"} Learn more about me {">>>"}
+            </Link>
+          </motion.div>
           <DownloadCVButton />
         </div>
       </section>

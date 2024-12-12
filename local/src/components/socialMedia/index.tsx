@@ -5,6 +5,8 @@ import {
   Linkedin,
   Threads,
   Youtube,
+  Github, // Make sure to import the Github icon
+  X, // Make sure to import the X (Twitter) icon
 } from "../../assets/icons/socialMedia";
 
 const socialMediaLinks = [
@@ -14,16 +16,37 @@ const socialMediaLinks = [
     alt: "Linkedin",
   },
   {
+    url: "https://github.com/Chikuu98",
+    icon: Github,
+    alt: "Github",
+  },
+  {
     url: "https://www.instagram.com/chikuzgram/",
     icon: Instagram,
     alt: "Instagram",
   },
-  { url: "https://www.threads.net/@chikuz98", icon: Threads, alt: "Threads" },
-  { url: "https://www.youtube.com/@ChiranJ", icon: Youtube, alt: "Youtube" },
+
+  { 
+    url: "https://www.youtube.com/@ChiranJ", 
+    icon: Youtube, 
+    alt: "Youtube" 
+  },
+  {
+    url: "https://x.com/chikuu98",
+    icon: X,
+    alt: "X",
+  },
+  { 
+    url: "https://www.threads.net/@chikuz98", 
+    icon: Threads, 
+    alt: "Threads" 
+  },
 ];
+
 interface SocialMediaProps {
   className?: string;
 }
+
 const SocialMedia: React.FC<SocialMediaProps> = ({ className }) => {
   return (
     <div className="flex gap-5">

@@ -1,4 +1,10 @@
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Outlet,
+  RouterProvider,
+  createBrowserRouter,
+  useLocation,
+} from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import "./App.css";
 import { Home } from "./pages/home/home";
 import Header from "./components/header";
@@ -9,22 +15,42 @@ import { SendMail } from "./pages/sendMail/sendMail";
 import { Technologies } from "./pages/technologies/technologies";
 import { Projects } from "./pages/projects/projects";
 import { AgeProvider } from "./contexts/AgeProvider";
+import ScrollToTop from "./components/ScrollToTop";
+
+const Layout = () => {
+  return (
+    <div className="main flex flex-col min-h-screen">
+      <AgeProvider>
+        <Header />
+        <div className="flex-grow pt-[56px]">
+          <ScrollToTop />
+          <AnimatedOutlet />
+        </div>
+        <Footer />
+      </AgeProvider>
+    </div>
+  );
+};
+
+const AnimatedOutlet = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location.pathname}
+        initial={{ y: -50 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20, duration: 0.5 }}
+        className="h-full"
+      >
+        <Outlet />
+      </motion.div>
+    </AnimatePresence>
+  );
+};
 
 function App() {
-  const Layout = () => {
-    return (
-      <div className="main flex flex-col min-h-screen">
-        <AgeProvider>
-          <Header />
-          <div className="flex-grow pt-[56px]">
-            <Outlet />
-          </div>
-          <Footer />
-        </AgeProvider>
-      </div>
-    );
-  };
-
   const router = createBrowserRouter([
     {
       path: "/",
