@@ -2,7 +2,7 @@ import React from "react";
 
 const DownloadCVButton: React.FC = () => {
   return (
-    <div className="text-center mt-10">
+    <div className="text-center mt-10 animate-ripple">
       <a
         href="/cv.pdf"
         download="CHIRAN_JEEWANTHA_CV.pdf"

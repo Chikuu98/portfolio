@@ -7,6 +7,14 @@ export const Home = () => {
       {/* Hero Section */}
       <section className="bg-primary-hover text-text py-20 px-10">
         <div className="container mx-auto text-center">
+          {/* Image */}
+          <div className="mb-8">
+            <img
+              src="/myPic.jpg"
+              alt="Chiran Jeewantha"
+              className="mx-auto rounded-full h-60 w-60 object-cover border-4 border-white shadow-lg animate-ripple"
+            />
+          </div>
           <h1 className="text-5xl md:text-6xl font-extrabold text-white">
             Welcome to My Portfolio
           </h1>
@@ -41,13 +49,13 @@ export const Home = () => {
           <div className="flex justify-center gap-6 mt-6">
             <Link
               to="/service"
-              className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors"
+              className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors animate-ripple"
             >
               My Services
             </Link>
             <Link
               to="/projects"
-              className="bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent-hover transition-colors"
+              className="bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent-hover transition-colors animate-ripple"
             >
               View Projects
             </Link>

@@ -63,7 +63,7 @@ const Header: React.FC = () => {
                   <Link to="/sendMail">
                     <button
                       type="button"
-                      className="relative rounded-full ml-8 bg-primary px-5 py-1 text-blue-100 hover:bg-primary-hover hover:text-white"
+                      className="relative rounded-full ml-8 bg-primary px-5 py-1 text-blue-100 hover:bg-primary-hover hover:text-white animate-ripple"
                     >
                       SEND MAIL
                     </button>
