@@ -8,7 +8,6 @@ import myLogo from "/c.svg";
 const navigation = [
   { name: "ABOUT ME", to: "/about", current: false },
   { name: "SERVICES", to: "/service", current: false },
-  { name: "CONTACT ME", to: "/contact", current: false },
   { name: "TECHNOLOGIES", to: "/technologies", current: false },
   { name: "PROJECTS", to: "/projects", current: false },
 ];
@@ -33,13 +32,9 @@ const Header: React.FC = () => {
                   <div className="flex flex-shrink-0 items-center">
                     <Link to="/">
                       <div className="flex items-center">
-                        <img
-                          className="h-8 w-auto"
-                          src={myLogo}
-                          alt="ChiranJ"
-                        />
+                        <img className="h-8 w-auto" src={myLogo} alt="ChiranJ" />
                         <span className="font-bold text-text font-sans-serif tracking-wide text-2xl ml-2">
-                          iRAnJ
+                          HiRaNJ
                         </span>
                       </div>
                     </Link>
@@ -65,7 +60,7 @@ const Header: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  <Link to="/contact">
+                  <Link to="/sendMail">
                     <button
                       type="button"
                       className="relative rounded-full ml-8 bg-primary px-5 py-1 text-blue-100 hover:bg-primary-hover hover:text-white"
@@ -78,8 +73,18 @@ const Header: React.FC = () => {
             </div>
 
             {/* Mobile Menu */}
-            <Disclosure.Panel className="sm:hidden">
+            <Disclosure.Panel className="sm:hidden z-40 bg-secondary fixed inset-0 flex items-center justify-center shadow-lg">
               <div className="space-y-1 px-2 pb-3 pt-2">
+                {/* Home link visible only in mobile */}
+                <Disclosure.Button
+                  key="HOME"
+                  as={Link}
+                  to="/"
+                  className="block rounded-md px-3 py-2 text-sm font-medium text-text hover:text-primary-hover"
+                >
+                  HOME
+                </Disclosure.Button>
+
                 {navigation.map((item) => (
                   <Disclosure.Button
                     key={item.name}
