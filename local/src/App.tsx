@@ -6,13 +6,17 @@ import { Footer } from "./components/footer/footer";
 import { About } from "./pages/about/about";
 import { Service } from "./pages/service/service";
 import { Contact } from "./pages/contact/contact";
+import { Technologies } from "./pages/technologies/technologies";
+import { Projects } from "./pages/projects/projects";
 
 function App() {
   const Layout = () => {
     return (
       <div className="main flex flex-col min-h-screen">
         <Header />
-        <Outlet />
+        <div className="flex-grow pt-[56px]">
+          <Outlet />
+        </div>
         <Footer />
       </div>
     );
@@ -37,6 +41,14 @@ function App() {
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "/technologies",
+          element: <Technologies />,
+        },
+        {
+          path: "/projects",
+          element: <Projects />,
         },
       ],
     },
