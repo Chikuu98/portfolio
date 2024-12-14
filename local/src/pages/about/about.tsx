@@ -131,7 +131,7 @@ export const About = () => {
                 title="Git"
               />
               <FaGithub
-                className="text-gray-700 text-3xl hover:scale-110 transition-transform"
+                className="text-gray-200 text-3xl hover:scale-110 transition-transform"
                 title="GitHub"
               />
               <FaGitlab

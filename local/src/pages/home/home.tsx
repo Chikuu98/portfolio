@@ -30,11 +30,11 @@ export const Home = () => {
             passionate software engineer.
           </p>
           <motion.div
-            animate={{ x: [-10, 10, -10] }}
+            animate={{ x: [-100, 100] }}
             transition={{
-              duration: 2, 
-              repeat: Infinity, 
-              ease: "easeInOut", 
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear",
             }}
           >
             <Link
