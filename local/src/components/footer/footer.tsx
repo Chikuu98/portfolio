@@ -33,9 +33,9 @@ export const Footer = () => {
             <div className="w-full pl-0 md:pl-5 lg:pl-20">
               <h2 className="text-primary text-base font-medium pb-1">Projects</h2>
               <hr className="border-t-1 border-primary opacity-20 w-[50px] pb-2" />
-              <h3 className="text-text text-base font-normal pb-2">Project A</h3>
-              <h3 className="text-text text-base font-normal pb-2">Project B</h3>
-              <h3 className="text-text text-base font-normal pb-2">Project C</h3>
+              <h3 className="text-text text-base font-normal pb-2">S24012</h3>
+              <h3 className="text-text text-base font-normal pb-2">S24011</h3>
+              <h3 className="text-text text-base font-normal pb-2">S24010</h3>
               <h3 className="text-text text-base font-normal pb-2">View All Projects</h3>
             </div>
           </div>
