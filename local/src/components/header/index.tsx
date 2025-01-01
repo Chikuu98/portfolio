@@ -7,9 +7,9 @@ import myLogo from "/c.svg";
 
 const navigation = [
   { name: "ABOUT ME", to: "/about", current: false },
-  { name: "SERVICES", to: "/service", current: false },
-  { name: "TECHNOLOGIES", to: "/technologies", current: false },
-  { name: "PROJECTS", to: "/projects", current: false },
+  // { name: "SERVICES", to: "/service", current: false },
+  // { name: "TECHNOLOGIES", to: "/technologies", current: false },
+  // { name: "PROJECTS", to: "/projects", current: false },
 ];
 
 const Header: React.FC = () => {

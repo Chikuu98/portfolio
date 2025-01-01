@@ -16,6 +16,7 @@ import { Technologies } from "./pages/technologies/technologies";
 import { Projects } from "./pages/projects/projects";
 import { AgeProvider } from "./contexts/AgeProvider";
 import ScrollToTop from "./components/ScrollToTop";
+import NewYearWish from "./pages/newYearWish/newYearWish";
 
 const Layout = () => {
   return (
@@ -76,6 +77,10 @@ function App() {
         {
           path: "/projects",
           element: <Projects />,
+        },
+        {
+          path: "/newYearWish",
+          element: <NewYearWish />,
         },
       ],
     },
