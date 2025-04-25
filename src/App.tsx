@@ -84,7 +84,11 @@ function App() {
         },
       ],
     },
-  ]);
+  ],
+  {
+    basename: "/portfolio", // 👈 important for GitHub Pages
+  }
+);
 
   return <RouterProvider router={router} />;
 }
