@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import DownloadCVButton from "../../components/Buttons/DownloadCVButton";
 import { motion } from "framer-motion";
+import myPic from "../../../public/myPic.jpg";
 
 export const Home = () => {
   return (
@@ -11,7 +12,7 @@ export const Home = () => {
           {/* Image */}
           <div className="mb-8">
             <img
-              src="/myPic.jpg"
+              src={myPic}
               alt="Chiran Jeewantha"
               className="mx-auto rounded-full h-60 w-60 object-cover border-4 border-white shadow-lg animate-ripple"
             />
