@@ -28,7 +28,7 @@ export const Home = () => {
             <span className="hidden md:block">Welcome to My Portfolio</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-text my-10">
+          <p className="text-lg md:text-xl text-text my-5 text-center">
             I am <span className="font-extrabold">Chiran Jeewantha</span>, a
             passionate software engineer.
           </p>
@@ -43,7 +43,7 @@ export const Home = () => {
           >
             <Link
               to="/about"
-              className="text-primary hover:text-secondary-hover text-lg font-bold italic pb-1 mt-2 inline-block"
+              className="text-primary hover:text-secondary-hover text-lg font-bold italic pb-1 inline-block"
             >
               {">>>"} Learn more about me {">>>"}
             </Link>
