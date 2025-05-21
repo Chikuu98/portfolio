@@ -178,21 +178,43 @@ export const About = () => {
           <div className="timeline-item relative pl-10">
             <div className="absolute left-2 top-5 w-2 h-2 bg-accent rounded-full"></div>
             <h3 className="text-xl sm:text-2xl font-semibold text-primary mb-2">
-              <span className="text-accent">Associate Software Engineer</span> @{" "}
+              <span className="text-accent">Software Engineer</span> @{" "}
               <span className="text-highlight font-medium">Cyber Concepts</span>
             </h3>
             <p className="text-base sm:text-lg text-text mb-4 italic">
-              <span className="font-bold text-accent">Nov 2023 - Present</span>{" "}
+              <span className="font-bold text-accent">Nov 2024 - Present</span>{" "}
               | Full-time - Remote
             </p>
             <ul className="list-disc list-inside text-base sm:text-lg text-text space-y-2">
               <li>
-                Contributing to large-scale projects with a focus on version
-                control and deployment.
+                Leading the development of scalable features and optimizing
+                system architecture.
               </li>
               <li>
-                Actively collaborating in team settings, sharing knowledge, and
-                proposing innovative ideas.
+                Working closely with cross-functional teams to define product
+                roadmaps and technical strategies.
+              </li>
+            </ul>
+          </div>
+
+          <div className="timeline-item relative pl-10">
+            <div className="absolute left-2 top-5 w-2 h-2 bg-accent rounded-full"></div>
+            <h3 className="text-xl sm:text-2xl font-semibold text-primary mb-2">
+              <span className="text-accent">Associate Software Engineer</span> @{" "}
+              <span className="text-highlight font-medium">Cyber Concepts</span>
+            </h3>
+            <p className="text-base sm:text-lg text-text mb-4 italic">
+              <span className="font-bold text-accent">Nov 2023 - Nov 2024</span>{" "}
+              | Full-time - Remote
+            </p>
+            <ul className="list-disc list-inside text-base sm:text-lg text-text space-y-2">
+              <li>
+                Maintained code quality by writing unit tests and following
+                version control standards.
+              </li>
+              <li>
+                Participated in daily standups, sprint planning, and peer code
+                reviews.
               </li>
             </ul>
           </div>
@@ -201,7 +223,7 @@ export const About = () => {
           <div className="timeline-item relative pl-10">
             <div className="absolute left-2 top-5 w-2 h-2 bg-accent rounded-full"></div>
             <h3 className="text-xl sm:text-2xl font-semibold text-primary mb-2">
-              <span className="text-accent">Associate Software Engineer</span> @{" "}
+              <span className="text-accent">Software Engineer</span> @{" "}
               <span className="text-highlight font-medium">Waverista</span>
             </h3>
             <p className="text-base sm:text-lg text-text mb-4 italic">

@@ -2,13 +2,19 @@ import { Link } from "react-router-dom";
 import DownloadCVButton from "../../components/Buttons/DownloadCVButton";
 import { motion } from "framer-motion";
 import myPic from "../../../public/myPic.jpg";
+import { ParticlesBackground } from "../../particlesBackground";
 
 export const Home = () => {
   return (
     <div className="bg-background min-h-screen text-text font-poppins">
       {/* Hero Section */}
-      <section className="bg-primary-hover text-text py-20 px-10">
-        <div className="container mx-auto text-center">
+      <section className="relative min-h-screen overflow-hidden bg-background text-text">
+        {/* Particles container */}
+        <div className="absolute inset-0 z-0 w-full h-full">
+          <ParticlesBackground />
+        </div>
+
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen">
           {/* Image */}
           <div className="mb-8">
             <img
@@ -19,17 +25,14 @@ export const Home = () => {
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold text-white">
             <span className="block md:hidden">WELCOME</span>{" "}
-            {/* Visible only on mobile */}
-            <span className="hidden md:block">
-              Welcome to My Portfolio
-            </span>{" "}
-            {/* Visible on larger screens */}
+            <span className="hidden md:block">Welcome to My Portfolio</span>
           </h1>
 
           <p className="text-lg md:text-xl text-text my-10">
             I am <span className="font-extrabold">Chiran Jeewantha</span>, a
             passionate software engineer.
           </p>
+
           <motion.div
             animate={{ x: [-100, 100] }}
             transition={{
@@ -40,7 +43,7 @@ export const Home = () => {
           >
             <Link
               to="/about"
-              className="text-primary hover:text-secondary-hover text-lg font-bold italic  pb-1 mt-2 inline-block"
+              className="text-primary hover:text-secondary-hover text-lg font-bold italic pb-1 mt-2 inline-block"
             >
               {">>>"} Learn more about me {">>>"}
             </Link>
