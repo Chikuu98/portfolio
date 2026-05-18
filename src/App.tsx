@@ -53,6 +53,8 @@ const AnimatedOutlet = () => {
 };
 
 function App() {
+  const basename = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "") || "/";
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -112,7 +114,7 @@ function App() {
     },
   ],
   {
-    basename: "/portfolio", // 👈 important for GitHub Pages
+    basename,
   }
 );
 
