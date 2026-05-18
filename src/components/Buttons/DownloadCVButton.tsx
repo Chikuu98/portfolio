@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { FaDownload, FaFileAlt } from "react-icons/fa";
 
 const DownloadCVButton: React.FC = () => {
+  const cvUrl = `${import.meta.env.BASE_URL}cv.pdf`;
+
   return (
     <motion.div 
       className="text-center"
@@ -10,7 +12,7 @@ const DownloadCVButton: React.FC = () => {
       whileTap={{ scale: 0.95 }}
     >
       <motion.a
-        href="/cv.pdf"
+        href={cvUrl}
         download="CHIRAN_JEEWANTHA_CV.pdf"
         className="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white py-3 px-8 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-glow overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
