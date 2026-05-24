@@ -11,7 +11,7 @@ const navigation = [
   { name: "SERVICES", to: "/service", current: false },
   { name: "TECHNOLOGIES", to: "/technologies", current: false },
   { name: "PROJECTS", to: "/projects", current: false },
-  { name: "CELEBRATION", to: "/celebration-builder", current: false },
+  // { name: "CELEBRATION", to: "/celebration-builder", current: false },
 ];
 
 // Custom hook to lock body scroll
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
               <div className="relative flex h-full items-center justify-between">
                 {/* Logo Section - Always visible */}
                 <div className="flex items-center">
-                  <Link to="/" className="group focus:outline-none">
+                  <Link to="/" className="group outline-none focus:outline-none focus-visible:outline-none">
                     <motion.div 
                       className="flex items-center"
                       whileHover={{ scale: 1.05 }}

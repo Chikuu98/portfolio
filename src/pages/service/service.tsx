@@ -31,14 +31,14 @@ interface Service {
   processSteps: { title: string; description: string }[];
 }
 
-interface Testimonial {
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  rating: number;
-  avatar: string;
-}
+// interface Testimonial {
+//   name: string;
+//   role: string;
+//   company: string;
+//   content: string;
+//   rating: number;
+//   avatar: string;
+// }
 
 export const Service = () => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
@@ -268,32 +268,32 @@ export const Service = () => {
     }
   ];
 
-  const testimonials: Testimonial[] = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO",
-      company: "TechStart Inc.",
-      content: "Outstanding work! The web application exceeded our expectations in both functionality and design. The development process was smooth and professional.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      name: "Michael Chen",
-      role: "Product Manager",
-      company: "Digital Solutions",
-      content: "The API development was flawless. Well-documented, secure, and performant. Highly recommend for any backend development needs.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Founder",
-      company: "StartupHub",
-      content: "Excellent technical consulting services. Helped us choose the right technology stack and provided valuable insights for our scaling strategy.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    }
-  ];
+  // const testimonials: Testimonial[] = [
+  //   {
+  //     name: "Sarah Johnson",
+  //     role: "CTO",
+  //     company: "TechStart Inc.",
+  //     content: "Outstanding work! The web application exceeded our expectations in both functionality and design. The development process was smooth and professional.",
+  //     rating: 5,
+  //     avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=150&h=150&fit=crop&crop=face"
+  //   },
+  //   {
+  //     name: "Michael Chen",
+  //     role: "Product Manager",
+  //     company: "Digital Solutions",
+  //     content: "The API development was flawless. Well-documented, secure, and performant. Highly recommend for any backend development needs.",
+  //     rating: 5,
+  //     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+  //   },
+  //   {
+  //     name: "Emily Rodriguez",
+  //     role: "Founder",
+  //     company: "StartupHub",
+  //     content: "Excellent technical consulting services. Helped us choose the right technology stack and provided valuable insights for our scaling strategy.",
+  //     rating: 5,
+  //     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+  //   }
+  // ];
 
   const whyChooseMe = [
     {
@@ -334,7 +334,7 @@ export const Service = () => {
             </span>
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
-            I offer comprehensive development services to bring your ideas to life. 
+            I offer comprehensive development services to bring your ideas to life.
             From web applications to desktop software, I deliver solutions that exceed expectations.
           </p>
           <div className="w-32 h-1 bg-gradient-to-r from-primary-400 to-cyan-400 mx-auto rounded-full" />
@@ -357,15 +357,15 @@ export const Service = () => {
               <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto`}>
                 <service.icon className="text-2xl text-white" />
               </div>
-              
+
               <h3 className="text-xl font-bold mb-3 group-hover:text-primary-400 transition-colors text-center">
                 {service.title}
               </h3>
-              
+
               <p className="text-text-secondary mb-4 leading-relaxed text-center">
                 {service.shortDescription}
               </p>
-              
+
               <div className="flex items-center justify-between">
                 <span className="text-primary-400 font-semibold">
                   Starting at {service.startingPrice}
@@ -389,7 +389,7 @@ export const Service = () => {
               I combine technical expertise with business understanding to deliver exceptional results.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyChooseMe.map((item, index) => (
               <motion.div
@@ -408,7 +408,7 @@ export const Service = () => {
         </motion.section>
 
         {/* Testimonials */}
-        <motion.section
+        {/* <motion.section
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -452,7 +452,7 @@ export const Service = () => {
               </motion.div>
             ))}
           </div>
-        </motion.section>
+        </motion.section> */}
 
         {/* CTA Section */}
         <motion.div
@@ -463,7 +463,7 @@ export const Service = () => {
         >
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
           <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-            Let's discuss your requirements and create something amazing together. 
+            Let's discuss your requirements and create something amazing together.
             I'm here to help bring your ideas to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -528,11 +528,10 @@ export const Service = () => {
                       <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
-                        className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 whitespace-nowrap ${
-                          activeTab === tab
-                            ? "bg-gradient-to-r from-primary-500 to-purple-500 text-white"
-                            : "bg-white/5 hover:bg-white/10"
-                        }`}
+                        className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 whitespace-nowrap ${activeTab === tab
+                          ? "bg-gradient-to-r from-primary-500 to-purple-500 text-white"
+                          : "bg-white/5 hover:bg-white/10"
+                          }`}
                       >
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
                       </button>
@@ -553,7 +552,7 @@ export const Service = () => {
                           <p className="text-text-secondary leading-relaxed">
                             {selectedService.detailedDescription}
                           </p>
-                          
+
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                               <h3 className="text-xl font-semibold mb-4">Key Features</h3>
@@ -566,7 +565,7 @@ export const Service = () => {
                                 ))}
                               </ul>
                             </div>
-                            
+
                             <div>
                               <h3 className="text-xl font-semibold mb-4">Technologies</h3>
                               <div className="flex flex-wrap gap-2">
@@ -579,7 +578,7 @@ export const Service = () => {
                                   </span>
                                 ))}
                               </div>
-                              
+
                               <div className="mt-6">
                                 <h4 className="font-semibold mb-2">Timeline</h4>
                                 <p className="text-text-secondary">{selectedService.timeline}</p>

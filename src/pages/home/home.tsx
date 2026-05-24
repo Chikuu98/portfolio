@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import DownloadCVButton from "../../components/Buttons/DownloadCVButton";
 import { motion } from "framer-motion";
 import myPic from "../../../public/myPic.png";
 import { ParticlesBackground } from "../../particlesBackground";
-import { FaCode, FaMobile, FaServer } from "react-icons/fa";
+import { FaCode, FaMobile, FaServer, FaDownload, FaFileAlt } from "react-icons/fa";
 
 export const Home = () => {
   const containerVariants = {
@@ -103,44 +102,71 @@ export const Home = () => {
             </div>
           </motion.div>
 
-          {/* Main Heading */}
+          {/* Dynamic Availability Indicator Pill */}
           <motion.div
             variants={itemVariants}
-            className="mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl mb-6 shadow-2xl animate-float"
           >
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-4">
-              <span className="bg-gradient-to-r from-primary-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Welcome to My
+            <span className="flex h-2.5 w-2.5 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+            </span>
+            <span className="text-[10px] md:text-xs font-semibold uppercase tracking-widest text-slate-300">
+              Available for New Projects & Roles
+            </span>
+          </motion.div>
+
+          {/* Hello World tag & Name Heading */}
+          <motion.div
+            variants={itemVariants}
+            className="mb-4"
+          >
+            <span className="text-primary-400 text-sm md:text-base font-mono tracking-widest block mb-3 uppercase">
+              &lt;hello world /&gt;
+            </span>
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none mb-6">
+              <span className="bg-gradient-to-r from-primary-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent block pb-2">
+                Chiran Jeewantha
               </span>
-              <br />
-              <span className="text-text-primary">Portfolio</span>
             </h1>
           </motion.div>
 
           {/* Subtitle */}
           <motion.div
             variants={itemVariants}
-            className="mb-8"
+            className="mb-10"
           >
-            <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              I am <span className="font-bold bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">Chiran Jeewantha</span>, 
-              a passionate <span className="font-semibold text-white">Full Stack Software Engineer</span> crafting innovative digital solutions.
+            <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+              A passionate <span className="text-cyan-400 font-semibold">Full Stack Software Engineer</span> dedicated to crafting next-generation digital products and robust architectures.
             </p>
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* Custom Modern Buttons Pair */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8"
           >
+            {/* Primary Button: Explore Profile */}
             <Link
               to="/about"
-              className="group relative overflow-hidden bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-glow"
+              className="group relative inline-flex items-center justify-center p-0.5 overflow-hidden text-lg font-bold rounded-xl bg-gradient-to-br from-primary-400 via-purple-500 to-cyan-400 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] w-full sm:w-auto"
             >
-              <span className="relative z-10">Learn More About Me</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              <span className="relative px-8 py-3.5 transition-all ease-in duration-300 bg-background-primary/95 group-hover:bg-transparent rounded-[10px] w-full text-center flex items-center justify-center gap-2">
+                <span>Explore Profile</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5">→</span>
+              </span>
             </Link>
-            <DownloadCVButton />
+
+            {/* Secondary Button: Download CV */}
+            <a
+              href={`${import.meta.env.BASE_URL}cv.pdf`}
+              download="CHIRAN_JEEWANTHA_CV.pdf"
+              className="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden text-lg font-bold rounded-xl glass-light border border-white/10 hover:border-cyan-400/50 hover:bg-cyan-500/5 text-slate-300 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] gap-3 w-full sm:w-auto"
+            >
+              <FaFileAlt className="text-xl text-cyan-400 group-hover:animate-bounce" />
+              <span>Download CV</span>
+              <FaDownload className="text-sm text-cyan-400/80 group-hover:translate-y-0.5 transition-transform duration-300" />
+            </a>
           </motion.div>
 
           {/* Animated Arrow */}
@@ -180,37 +206,104 @@ export const Home = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-cyan-400 mx-auto rounded-full" />
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="glass rounded-3xl p-8 md:p-12 text-center">
-              <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-8">
-                I specialize in <span className="text-primary-400 font-semibold">software development</span> with 
-                a focus on creating seamless, scalable, and intuitive user experiences. With expertise in 
-                <span className="text-cyan-400 font-semibold"> Laravel, React, NestJS, TypeScript</span>, and modern databases, 
-                I'm passionate about building innovative solutions that make a difference.
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+            {/* Left Column: Modern Mini IDE/Terminal Mock-up */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="lg:col-span-5 relative"
+            >
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-2xl opacity-70 animate-pulse" />
+              
+              <div className="relative glass border border-white/10 rounded-2xl overflow-hidden shadow-2xl font-mono text-xs md:text-sm">
+                <div className="bg-white/5 px-4 py-3 flex items-center justify-between border-b border-white/10">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
+                    <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
+                    <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
+                  </div>
+                  <span className="text-text-secondary text-[10px] font-medium tracking-wider">skills.json</span>
+                  <div className="w-10" />
+                </div>
+                <div className="p-5 space-y-2.5 bg-[#0a0f1d]/90 text-slate-300 leading-relaxed">
+                  <div>
+                    <span className="text-pink-400">const</span>{" "}
+                    <span className="text-blue-400">skills</span>{" "}
+                    <span className="text-white">=</span>{" "}
+                    <span className="text-yellow-400">{"{"}</span>
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-purple-400">"frontend"</span>:{" "}
+                    <span className="text-yellow-400">{"["}</span>
+                    <span className="text-cyan-400">"React"</span>,{" "}
+                    <span className="text-cyan-400">"TypeScript"</span>
+                    <span className="text-yellow-400">{"]"}</span>,
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-purple-400">"backend"</span>:{" "}
+                    <span className="text-yellow-400">{"["}</span>
+                    <span className="text-orange-400">"NestJS"</span>,{" "}
+                    <span className="text-orange-400">"Laravel"</span>
+                    <span className="text-yellow-400">{"]"}</span>,
+                  </div>
+                  <div className="pl-4">
+                    <span className="text-purple-400">"focus"</span>:{" "}
+                    <span className="text-green-400">"Performance & Clean Code"</span>
+                  </div>
+                  <div>
+                    <span className="text-yellow-400">{"}"}</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Column: About text and buttons */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="lg:col-span-7 flex flex-col justify-center space-y-6"
+            >
+              <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+                Crafting Exceptional Digital Experiences With{" "}
+                <span className="bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
+                  Modern Technologies
+                </span>
+              </h3>
+              
+              <p className="text-text-secondary text-base md:text-lg leading-relaxed">
+                I specialize in <span className="text-white font-semibold">software development</span> with a strong focus on building seamless, scalable, and highly performant full-stack solutions.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/service"
-                  className="btn-primary"
-                >
+              <p className="text-text-secondary text-base md:text-lg leading-relaxed">
+                With deep expertise across <span className="text-primary-400 font-semibold">NestJS, React, Laravel, and TypeScript</span>, my passion lies in translating complex requirements into clean, elegant, and secure code.
+              </p>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary-500/10 border border-primary-500/20 text-primary-300">
+                  ⚡ Scalable Architecture
+                </span>
+                <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-cyan-500/10 border border-cyan-500/20 text-cyan-300">
+                  🚀 Highly Performant APIs
+                </span>
+                <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-purple-500/10 border border-purple-500/20 text-purple-300">
+                  🎨 Interactive & Responsive UIs
+                </span>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Link to="/about" className="btn-primary text-center">
+                  Learn More About Me
+                </Link>
+                <Link to="/service" className="btn-secondary text-center">
                   My Services
                 </Link>
-                <Link
-                  to="/projects"
-                  className="btn-secondary"
-                >
-                  View Projects
-                </Link>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
