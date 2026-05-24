@@ -62,14 +62,14 @@ export const Home = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary-500/20 to-purple-500/20 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
 
-        <motion.div 
+        <motion.div
           className="relative z-10 container mx-auto px-6 text-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {/* Profile Image */}
-          <motion.div 
+          <motion.div
             className="mb-8"
             variants={itemVariants}
           >
@@ -88,10 +88,10 @@ export const Home = () => {
               </motion.div>
               <motion.div
                 className="absolute -bottom-4 -right-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full p-3 shadow-lg"
-                animate={{ 
+                animate={{
                   rotate: 360,
                 }}
-                transition={{ 
+                transition={{
                   duration: 20,
                   repeat: Infinity,
                   ease: "linear"
@@ -126,7 +126,7 @@ export const Home = () => {
             </span>
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none mb-6">
               <span className="bg-gradient-to-r from-primary-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent block pb-2">
-                Chiran Jeewantha
+                CHIRAN JEEWANTHA
               </span>
             </h1>
           </motion.div>
@@ -161,6 +161,7 @@ export const Home = () => {
             <a
               href={`${import.meta.env.BASE_URL}cv.pdf`}
               download="CHIRAN_JEEWANTHA_CV.pdf"
+              onClick={() => window.open(`${import.meta.env.BASE_URL}cv.pdf`, '_blank')}
               className="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden text-lg font-bold rounded-xl glass-light border border-white/10 hover:border-cyan-400/50 hover:bg-cyan-500/5 text-slate-300 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] gap-3 w-full sm:w-auto"
             >
               <FaFileAlt className="text-xl text-cyan-400 group-hover:animate-bounce" />
@@ -216,7 +217,7 @@ export const Home = () => {
               className="lg:col-span-5 relative"
             >
               <div className="absolute -inset-4 bg-gradient-to-r from-primary-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-2xl opacity-70 animate-pulse" />
-              
+
               <div className="relative glass border border-white/10 rounded-2xl overflow-hidden shadow-2xl font-mono text-xs md:text-sm">
                 <div className="bg-white/5 px-4 py-3 flex items-center justify-between border-b border-white/10">
                   <div className="flex items-center space-x-2">
@@ -273,11 +274,11 @@ export const Home = () => {
                   Modern Technologies
                 </span>
               </h3>
-              
+
               <p className="text-text-secondary text-base md:text-lg leading-relaxed">
                 I specialize in <span className="text-white font-semibold">software development</span> with a strong focus on building seamless, scalable, and highly performant full-stack solutions.
               </p>
-              
+
               <p className="text-text-secondary text-base md:text-lg leading-relaxed">
                 With deep expertise across <span className="text-primary-400 font-semibold">NestJS, React, Laravel, and TypeScript</span>, my passion lies in translating complex requirements into clean, elegant, and secure code.
               </p>
