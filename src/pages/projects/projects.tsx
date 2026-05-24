@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaVuejs, FaLaravel } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss, SiNestjs, SiMongodb, SiMysql, SiElectron, SiNextdotjs, SiSpringboot } from "react-icons/si";
+import { FaGithub, FaExternalLinkAlt, FaReact, FaLaravel } from "react-icons/fa";
+import { SiTypescript, SiTailwindcss, SiNestjs, SiMongodb, SiMysql, SiElectron, SiPostgresql, SiRedis } from "react-icons/si";
 
 interface Project {
   id: number;
@@ -47,58 +47,58 @@ export const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Dashboard",
-      description: "A comprehensive admin dashboard for managing e-commerce operations with real-time analytics.",
-      longDescription: "A full-featured e-commerce admin dashboard built with React and TypeScript. Features include inventory management, order tracking, customer analytics, and real-time sales monitoring. The backend is powered by NestJS with MongoDB for data persistence.",
+      title: "Nova Project Management Console",
+      description: "An enterprise collaborative workspace with real-time Kanban boards, sprint tracking, and document collaboration.",
+      longDescription: "Nova is an enterprise collaborative console designed for agile teams. Built using React and Laravel, it utilizes WebSockets for real-time task board updates, collaborative rich-text documentation editing, multi-user chat, and comprehensive velocity tracking. Data integrity is handled via PostgreSQL, and real-time messaging is managed through Redis.",
       category: "web",
       technologies: [
         { icon: FaReact, name: "React", color: "text-blue-400" },
         { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-        { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-400" },
-        { icon: SiNestjs, name: "NestJS", color: "text-red-500" },
-        { icon: SiMongodb, name: "MongoDB", color: "text-green-500" }
+        { icon: FaLaravel, name: "Laravel", color: "text-red-600" },
+        { icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-400" },
+        { icon: SiRedis, name: "Redis", color: "text-red-400" }
       ],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      githubUrl: "https://github.com/username/ecommerce-dashboard",
-      liveUrl: "https://ecommerce-dashboard-demo.com",
+      image: `${import.meta.env.BASE_URL}projects/nova-pm.png`,
+      githubUrl: "https://github.com/Chikuu98/nova-pm",
+      liveUrl: "https://nova-pm.demo.chiranj.me",
       features: [
-        "Real-time sales analytics",
-        "Inventory management",
-        "Order tracking system",
-        "Customer management",
-        "Revenue reporting"
+        "Real-time interactive Kanban board",
+        "Collaborative documents workspace",
+        "Agile sprint velocity tracking charts",
+        "Team messaging and activity stream",
+        "Integrated document attachments"
       ],
       status: "completed"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative project management tool with team features and real-time updates.",
-      longDescription: "A modern task management application that enables teams to collaborate effectively. Built with Vue.js and Laravel, it features real-time notifications, file sharing, time tracking, and comprehensive project analytics.",
-      category: "web",
+      title: "Nexus API Gateway & Analytics",
+      description: "A high-performance API gateway with rate limiting, load balancing, and a beautiful React developer analytics portal.",
+      longDescription: "Nexus is a secure, high-throughput API gateway built with NestJS and Redis. It handles route forwarding, token authorization, request rate limiting, and dynamic load balancing. It includes a beautiful React-based analytics portal showing API uptime, throughput, latency histograms, and detailed JSON access logs in real-time.",
+      category: "api",
       technologies: [
-        { icon: FaVuejs, name: "Vue.js", color: "text-green-500" },
-        { icon: FaLaravel, name: "Laravel", color: "text-red-600" },
-        { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
-        { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-400" }
+        { icon: SiNestjs, name: "NestJS", color: "text-red-500" },
+        { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
+        { icon: SiRedis, name: "Redis", color: "text-red-400" },
+        { icon: FaReact, name: "React Portal", color: "text-blue-400" },
+        { icon: SiMongodb, name: "MongoDB", color: "text-green-500" }
       ],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
-      githubUrl: "https://github.com/username/task-manager",
-      liveUrl: "https://task-manager-demo.com",
+      image: `${import.meta.env.BASE_URL}projects/nexus-api.png`,
+      githubUrl: "https://github.com/Chikuu98/nexus-gateway",
       features: [
-        "Team collaboration",
-        "Real-time notifications",
-        "File sharing",
-        "Time tracking",
-        "Project analytics"
+        "Dynamic route forwarding & load balancing",
+        "JSON Web Token (JWT) authorization handler",
+        "Redis-backed rate limiting & request throttling",
+        "Interactive developer dashboard with charts",
+        "Detailed query logging & uptime monitoring"
       ],
       status: "completed"
     },
     {
       id: 3,
-      title: "Weather Desktop App",
-      description: "A cross-platform desktop weather application with detailed forecasts and beautiful UI.",
-      longDescription: "A sleek desktop weather application built with Electron.js and React. Provides detailed weather forecasts, interactive maps, and customizable widgets. Features offline mode and multi-location support.",
+      title: "Helios Desktop Controller",
+      description: "A cross-platform system monitor and hardware analytics dashboard built with Electron, TypeScript, and Tailwind CSS.",
+      longDescription: "Helios is a sleek, modern desktop application designed for real-time hardware monitoring. Built using Electron.js and React, it polls low-level OS APIs to display animated speedometers for CPU/RAM usage, storage I/O statistics, active network adapters, and running background threads. Features include a cyberpunk glowing glassmorphic theme and widget customizability.",
       category: "desktop",
       technologies: [
         { icon: SiElectron, name: "Electron", color: "text-cyan-400" },
@@ -106,85 +106,40 @@ export const Projects = () => {
         { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
         { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-400" }
       ],
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
-      githubUrl: "https://github.com/username/weather-app",
+      image: `${import.meta.env.BASE_URL}projects/helios-desktop.png`,
+      githubUrl: "https://github.com/Chikuu98/helios-controller",
       features: [
-        "Cross-platform compatibility",
-        "Real-time weather data",
-        "Interactive weather maps",
-        "Customizable widgets",
-        "Offline mode support"
+        "Cross-platform support (Windows, macOS, Linux)",
+        "Real-time hardware speedometers & graphs",
+        "System resources tracking & process manager",
+        "Customizable glassmorphic dashboards",
+        "Low-level OS system metric access"
       ],
       status: "completed"
     },
     {
       id: 4,
-      title: "Blog API Service",
-      description: "A robust RESTful API for blog management with authentication and content moderation.",
-      longDescription: "A comprehensive blog API built with NestJS and TypeScript. Features include user authentication, content management, comment system, and automated content moderation. Designed for scalability and security.",
-      category: "api",
-      technologies: [
-        { icon: SiNestjs, name: "NestJS", color: "text-red-500" },
-        { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-        { icon: SiMongodb, name: "MongoDB", color: "text-green-500" },
-        { icon: FaNodeJs, name: "Node.js", color: "text-green-600" }
-      ],
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
-      githubUrl: "https://github.com/username/blog-api",
-      features: [
-        "JWT Authentication",
-        "Content management",
-        "Comment system",
-        "Automated moderation",
-        "RESTful endpoints"
-      ],
-      status: "completed"
-    },
-    {
-      id: 5,
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website with smooth animations and dark mode.",
-      longDescription: "The very website you're viewing! Built with React, TypeScript, and Tailwind CSS. Features smooth animations with Framer Motion, particle effects, and a fully responsive design.",
+      title: "Apex E-Commerce Storefront",
+      description: "A modern, performant online storefront with a robust global cart state, instant sorting/filtering, and Stripe payments.",
+      longDescription: "Apex is a modern, high-speed online shopping platform. Built with React and Laravel, it includes a robust global cart state manager, custom product filters, instant text searches, secure guest checkouts, and fully integrated Stripe payment flow. The system uses MySQL for relational inventory tracking and incorporates responsive glassmorphic cards.",
       category: "web",
       technologies: [
         { icon: FaReact, name: "React", color: "text-blue-400" },
-        { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-        { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-400" },
-        { icon: SiNextdotjs, name: "Vite", color: "text-purple-500" }
+        { icon: FaLaravel, name: "Laravel", color: "text-red-600" },
+        { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
+        { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-400" }
       ],
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
-      githubUrl: "https://github.com/username/portfolio",
-      liveUrl: "https://your-portfolio.com",
+      image: `${import.meta.env.BASE_URL}projects/apex-shop.png`,
+      githubUrl: "https://github.com/Chikuu98/apex-shop",
+      liveUrl: "https://shop.demo.chiranj.me",
       features: [
-        "Responsive design",
-        "Smooth animations",
-        "Particle effects",
-        "Contact form",
-        "SEO optimized"
+        "Responsive product catalog with grid displays",
+        "Instant multi-attribute search and filtering",
+        "Stripe payment gateway integration",
+        "Administrative portal for stock control",
+        "Dynamic cart management with persistent caching"
       ],
       status: "completed"
-    },
-    {
-      id: 6,
-      title: "Microservices Architecture",
-      description: "A scalable microservices system for enterprise applications with Spring Boot.",
-      longDescription: "A comprehensive microservices architecture built with Spring Boot. Includes service discovery, API gateway, distributed tracing, and containerized deployment with Docker and Kubernetes.",
-      category: "api",
-      technologies: [
-        { icon: SiSpringboot, name: "Spring Boot", color: "text-green-500" },
-        { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
-        { icon: FaNodeJs, name: "Docker", color: "text-blue-400" }
-      ],
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-      githubUrl: "https://github.com/username/microservices",
-      features: [
-        "Service discovery",
-        "API gateway",
-        "Distributed tracing",
-        "Container orchestration",
-        "Load balancing"
-      ],
-      status: "in-progress"
     }
   ];
 
