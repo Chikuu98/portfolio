@@ -16,7 +16,7 @@ import {
   FaDatabase,
   FaServer,
   FaCloud,
-  FaMobile
+  FaDesktop
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -33,7 +33,7 @@ import {
   SiPostgresql,
   SiFirebase,
   SiVercel,
-  SiNetlify,
+  SiDigitalocean,
   SiIntellijidea,
   SiNpm,
   SiYarn,
@@ -42,7 +42,11 @@ import {
   SiPrettier,
   SiKubernetes,
   SiJenkins,
-  SiGraphql
+  SiGraphql,
+  SiJira,
+  SiTrello,
+  SiConfluence,
+  SiSlack
 } from "react-icons/si";
 
 interface Technology {
@@ -337,12 +341,12 @@ export const Technologies = () => {
           description: "Frontend deployment and serverless functions"
         },
         {
-          icon: SiNetlify,
-          name: "Netlify",
-          color: "text-cyan-400",
-          proficiency: 82,
+          icon: SiDigitalocean,
+          name: "DigitalOcean",
+          color: "text-blue-500",
+          proficiency: 80,
           experience: "2+ years",
-          description: "Static site hosting and continuous deployment"
+          description: "Cloud infrastructure, VPS hosting (Droplets), and app deployments"
         },
         {
           icon: SiJenkins,
@@ -355,9 +359,9 @@ export const Technologies = () => {
       ]
     },
     {
-      title: "Desktop & Mobile",
-      description: "Cross-platform development for desktop and mobile applications",
-      icon: FaMobile,
+      title: "Desktop App Development",
+      description: "Cross-platform development for desktop applications",
+      icon: FaDesktop,
       gradient: "from-pink-500 to-purple-500",
       technologies: [
         {
@@ -369,12 +373,12 @@ export const Technologies = () => {
           description: "Cross-platform desktop applications with web technologies"
         },
         {
-          icon: FaReact,
-          name: "React Native",
-          color: "text-blue-400",
+          icon: FaPython,
+          name: "Python Desktop Apps",
+          color: "text-yellow-400",
           proficiency: 70,
           experience: "1+ years",
-          description: "Native mobile app development with React"
+          description: "Cross-platform GUI applications using PyQt, PySide, or Tkinter"
         }
       ]
     },
@@ -449,6 +453,46 @@ export const Technologies = () => {
           description: "Code formatting and style consistency"
         }
       ]
+    },
+    {
+      title: "Management & Collaboration",
+      description: "Tools for agile planning, task tracking, team communication, and project documentation",
+      icon: SiJira,
+      gradient: "from-blue-600 to-indigo-600",
+      technologies: [
+        {
+          icon: SiJira,
+          name: "Jira",
+          color: "text-blue-500",
+          proficiency: 85,
+          experience: "2+ years",
+          description: "Agile project tracking, sprint planning, backlog grooming, and workflow management"
+        },
+        {
+          icon: SiTrello,
+          name: "Trello",
+          color: "text-blue-400",
+          proficiency: 90,
+          experience: "3+ years",
+          description: "Visual Kanban boards for task tracking, organization, and lightweight project planning"
+        },
+        {
+          icon: SiConfluence,
+          name: "Confluence",
+          color: "text-blue-600",
+          proficiency: 80,
+          experience: "2+ years",
+          description: "Knowledge sharing, technical documentation, product requirements, and collaborative workspaces"
+        },
+        {
+          icon: SiSlack,
+          name: "Slack",
+          color: "text-purple-400",
+          proficiency: 95,
+          experience: "4+ years",
+          description: "Real-time communication, structured channels, app integrations, and team coordination"
+        }
+      ]
     }
   ];
 
@@ -482,7 +526,7 @@ export const Technologies = () => {
             </span>
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
-            Explore my technical expertise across various domains. From frontend frameworks to 
+            Explore my technical expertise across various domains. From frontend frameworks to
             backend services, databases to deployment tools - here's my technology stack.
           </p>
           <div className="w-32 h-1 bg-gradient-to-r from-primary-400 to-cyan-400 mx-auto rounded-full" />
@@ -500,11 +544,10 @@ export const Technologies = () => {
               key={index}
               variants={itemVariants}
               onClick={() => setSelectedCategory(index)}
-              className={`flex items-center gap-3 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === index
-                  ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
-                  : "glass-light text-text-secondary hover:text-text-primary hover:bg-white/10"
-              }`}
+              className={`flex items-center gap-3 px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === index
+                ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
+                : "glass-light text-text-secondary hover:text-text-primary hover:bg-white/10"
+                }`}
             >
               {(() => {
                 const IconComponent = category.icon;

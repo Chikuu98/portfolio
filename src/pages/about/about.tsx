@@ -98,51 +98,124 @@ export const About = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="mb-20"
+          className="mb-24"
         >
-          <motion.div
-            variants={itemVariants}
-            className="glass rounded-3xl p-8 md:p-12 text-center max-w-5xl mx-auto"
-          >
-            <motion.h2 
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+            {/* Left Column: Modern Interactive Developer Console */}
+            <motion.div
               variants={itemVariants}
-              className="text-3xl md:text-4xl font-bold mb-8"
+              className="lg:col-span-5 relative"
             >
-              <span className="bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent">
-                Introduction
-              </span>
-            </motion.h2>
-            
-            <motion.div 
-              variants={itemVariants}
-              className="w-24 h-1 bg-gradient-to-r from-primary-400 to-cyan-400 mx-auto rounded-full mb-8"
-            />
-
-            <motion.p 
-              variants={itemVariants}
-              className="text-lg md:text-xl text-text-secondary leading-relaxed italic mb-6"
-            >
-              Hello there! I'm <span className="text-primary-400 font-semibold">Chiran Jeewantha Vidanagamage</span>, 
-              a dedicated <span className="text-white font-semibold">Full Stack Developer</span> based in Sri Lanka. At{" "}
-              <span className="text-cyan-400 font-semibold">{age}</span>, my journey in the world of technology has been driven by a 
-              profound passion for creating innovative solutions through code. As a
-              <span className="text-primary-400 font-semibold"> Software Engineer</span>, I specialize in full-stack development, 
-              with expertise in <span className="text-white font-semibold">Nest.js, React.js, Laravel, Vue.js, and TypeScript</span>. 
-              My work revolves around turning ideas into reality by leveraging cutting-edge technologies and best coding practices.
-            </motion.p>
-
-            <motion.p 
-              variants={itemVariants}
-              className="text-lg text-text-secondary leading-relaxed mb-8"
-            >
-              I have a deep interest in solving complex problems with technology and 
-              believe in continuous learning to keep up with the evolving tech industry.
-            </motion.p>
-
-            <motion.div variants={itemVariants}>
-              <DownloadCVButton />
+              {/* Decorative background glow */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-2xl opacity-70 animate-pulse" />
+              
+              <div className="relative glass border border-white/10 rounded-2xl overflow-hidden shadow-2xl font-mono text-xs md:text-sm">
+                {/* Window header */}
+                <div className="bg-white/5 px-4 py-3 flex items-center justify-between border-b border-white/10">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3.5 h-3.5 rounded-full bg-[#ff5f56]" />
+                    <div className="w-3.5 h-3.5 rounded-full bg-[#ffbd2e]" />
+                    <div className="w-3.5 h-3.5 rounded-full bg-[#27c93f]" />
+                  </div>
+                  <span className="text-text-secondary text-[11px] font-medium tracking-wider">developer.json</span>
+                  <div className="w-12" />
+                </div>
+                
+                {/* Window content */}
+                <div className="p-6 space-y-3 bg-[#0a0f1d]/90 text-slate-300 leading-relaxed">
+                  <div>
+                    <span className="text-pink-400">const</span>{" "}
+                    <span className="text-blue-400">developer</span>{" "}
+                    <span className="text-white">=</span>{" "}
+                    <span className="text-yellow-400">{"{"}</span>
+                  </div>
+                  <div className="pl-5">
+                    <span className="text-purple-400">"name"</span>:{" "}
+                    <span className="text-green-400">"Chiran Jeewantha"</span>,
+                  </div>
+                  <div className="pl-5">
+                    <span className="text-purple-400">"role"</span>:{" "}
+                    <span className="text-green-400">"Full Stack Engineer"</span>,
+                  </div>
+                  <div className="pl-5">
+                    <span className="text-purple-400">"age"</span>:{" "}
+                    <span className="text-cyan-400">{age}</span>,
+                  </div>
+                  <div className="pl-5">
+                    <span className="text-purple-400">"location"</span>:{" "}
+                    <span className="text-green-400">"Sri Lanka"</span>,
+                  </div>
+                  <div className="pl-5">
+                    <span className="text-purple-400">"passion"</span>:{" "}
+                    <span className="text-green-400">"Crafting clean, scalable code"</span>,
+                  </div>
+                  <div className="pl-5">
+                    <span className="text-purple-400">"stack"</span>:{" "}
+                    <span className="text-yellow-400">{"["}</span>
+                    <span className="text-orange-400">"NestJS"</span>,{" "}
+                    <span className="text-blue-400">"React"</span>,{" "}
+                    <span className="text-red-400">"Laravel"</span>
+                    <span className="text-yellow-400">{"]"}</span>
+                  </div>
+                  <div>
+                    <span className="text-yellow-400">{"}"}</span>
+                  </div>
+                </div>
+              </div>
             </motion.div>
-          </motion.div>
+
+            {/* Right Column: Dynamic Intro text & tags */}
+            <motion.div
+              variants={itemVariants}
+              className="lg:col-span-7 flex flex-col justify-center space-y-6"
+            >
+              <div className="space-y-2">
+                <span className="text-primary-400 font-bold text-sm tracking-widest uppercase">
+                  Discover My Story
+                </span>
+                <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+                  I Turn Complex Problems Into{" "}
+                  <span className="bg-gradient-to-r from-primary-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    Elegant Solutions
+                  </span>
+                </h2>
+              </div>
+              
+              <p className="text-text-secondary text-base md:text-lg leading-relaxed">
+                Hello there! I'm <span className="text-white font-semibold">Chiran Jeewantha Vidanagamage</span>, a dedicated 
+                <span className="text-primary-400 font-semibold"> Full Stack Developer</span> based in Sri Lanka. At{" "}
+                <span className="text-cyan-400 font-semibold">{age}</span>, my journey in technology has been defined by a deep passion 
+                for engineering high-performance digital solutions and robust system architectures.
+              </p>
+
+              <p className="text-text-secondary text-base md:text-lg leading-relaxed">
+                Specializing in end-to-end full-stack development, I leverage modern paradigms like <span className="text-white font-semibold">Nest.js, React.js, Laravel, Vue.js, and TypeScript</span> to craft experiences that are exceptionally performant, highly secure, and beautifully interactive.
+              </p>
+
+              {/* Dynamic tag badges */}
+              <div className="flex flex-wrap gap-2 pt-2">
+                <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary-500/10 border border-primary-500/20 text-primary-300">
+                  ⚡ Full Stack Development
+                </span>
+                <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-purple-500/10 border border-purple-500/20 text-purple-300">
+                  🚀 Scalable Backend APIs
+                </span>
+                <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-cyan-500/10 border border-cyan-500/20 text-cyan-300">
+                  🎨 Pixel-Perfect Frontends
+                </span>
+                <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-green-500/10 border border-green-500/20 text-green-300">
+                  🛠️ Clean Code Architect
+                </span>
+              </div>
+
+              <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                <DownloadCVButton />
+                <Link to="/projects" className="btn-secondary text-center w-full sm:w-auto">
+                  View My Work
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </motion.section>
 
         {/* Skills Section */}

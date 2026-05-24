@@ -23,7 +23,7 @@
 }
 
 /* Enhanced focus states for accessibility */
-*:focus {
+*:focus-visible {
   outline: 2px solid rgba(59, 130, 246, 0.5);
   outline-offset: 2px;
 }
