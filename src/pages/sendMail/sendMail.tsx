@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { FaPaperPlane, FaUser, FaEnvelope, FaComment, FaTag } from "react-icons/fa";
 
 export const SendMail: React.FC = () => {
-  const SERVICE_ID = "service_6d6h9ds";
+  const SERVICE_ID = "service_txhsstl";
   const TEMPLATE_ID = "template_7v4wq3w";
   const TEMPLATE_ID2 = "template_pbgi4uz";
   const PUBLIC_KEY = "7-9QoUCwLRLSiaZCf";
@@ -138,12 +138,12 @@ export const SendMail: React.FC = () => {
                 </span>
               </h2>
               <p className="text-text-secondary leading-relaxed mb-4 md:mb-6 text-sm md:text-base">
-                I'm always excited to discuss new opportunities, innovative projects, 
+                I'm always excited to discuss new opportunities, innovative projects,
                 or just to chat about technology. Feel free to reach out!
               </p>
-              
+
               <div className="space-y-3 md:space-y-4">
-                <motion.div 
+                <motion.div
                   className="flex items-center space-x-3 p-2 md:p-3 rounded-xl hover:bg-white/5 transition-colors duration-200"
                   whileHover={{ scale: 1.02, x: 5 }}
                   transition={{ duration: 0.2 }}
@@ -156,8 +156,8 @@ export const SendMail: React.FC = () => {
                     <p className="text-text-primary font-medium text-sm md:text-base break-all">chiranjonline@gmail.com</p>
                   </div>
                 </motion.div>
-                
-                <motion.div 
+
+                <motion.div
                   className="flex items-center space-x-3 p-2 md:p-3 rounded-xl hover:bg-white/5 transition-colors duration-200"
                   whileHover={{ scale: 1.02, x: 5 }}
                   transition={{ duration: 0.2 }}
@@ -171,7 +171,7 @@ export const SendMail: React.FC = () => {
                   </div>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="flex items-center space-x-3 p-2 md:p-3 rounded-xl hover:bg-white/5 transition-colors duration-200"
                   whileHover={{ scale: 1.02, x: 5 }}
                   transition={{ duration: 0.2 }}
@@ -207,9 +207,9 @@ export const SendMail: React.FC = () => {
                   <PreLoader />
                 </div>
               )}
-              
+
               {alert && (
-                <motion.div 
+                <motion.div
                   className="mb-3 md:mb-4"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -344,7 +344,7 @@ export const SendMail: React.FC = () => {
               </span>
             </h3>
             <p className="text-text-secondary mb-3 md:mb-4 text-sm leading-relaxed">
-              Prefer a different platform? You can also find me on various social media platforms or 
+              Prefer a different platform? You can also find me on various social media platforms or
               schedule a call to discuss your project in detail.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center">
