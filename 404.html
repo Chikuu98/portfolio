@@ -13,7 +13,7 @@
       // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
       // Note: this 301 redirect is only processed by the GitHub Pages server
       // if the /404.html file is missing or if the visit is a 404 response.
-      var pathSegmentsToKeep = 1;
+      var pathSegmentsToKeep = window.location.hostname.indexOf('github.io') !== -1 ? 1 : 0;
 
       var l = window.location;
       l.replace(
