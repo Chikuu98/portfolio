@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaReact, FaLaravel } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss, SiNestjs, SiMongodb, SiMysql, SiElectron, SiPostgresql, SiRedis } from "react-icons/si";
+import { SiTypescript, SiTailwindcss, SiNestjs, SiMysql, SiElectron, SiDigitalocean, SiGooglecalendar, SiGooglegemini, SiVuedotjs, SiDocker, SiPython, SiGooglemaps, SiSqlite, SiRedis, SiFastify, SiPostgresql } from "react-icons/si";
 
 interface Project {
   id: number;
@@ -47,97 +47,140 @@ export const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Nova Project Management Console",
-      description: "An enterprise collaborative workspace with real-time Kanban boards, sprint tracking, and document collaboration.",
-      longDescription: "Nova is an enterprise collaborative console designed for agile teams. Built using React and Laravel, it utilizes WebSockets for real-time task board updates, collaborative rich-text documentation editing, multi-user chat, and comprehensive velocity tracking. Data integrity is handled via PostgreSQL, and real-time messaging is managed through Redis.",
+      title: "FitSmart: AI-Powered Wellness Platform",
+      description: "A comprehensive full-stack wellness platform providing AI-personalized nutrition and workout plans, real-time progress tracking, and an integrated attendance system.",
+      longDescription: "FitSmart is an AI-powered full-stack wellness platform designed to provide personalized nutrition and workout plans with real-time progress tracking. Achieved an A+ grade for this 10-credit capstone project at the University of Moratuwa, it features multi-role authentication (Member, Mentor, Admin), a real-time attendance tracking system, and a community mentorship booking system. Deployed securely on a DigitalOcean Droplet, it integrates Gemini AI for plan generation and Google Calendar for appointment booking.",
       category: "web",
       technologies: [
         { icon: FaReact, name: "React", color: "text-blue-400" },
-        { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-        { icon: FaLaravel, name: "Laravel", color: "text-red-600" },
-        { icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-400" },
-        { icon: SiRedis, name: "Redis", color: "text-red-400" }
+        { icon: SiNestjs, name: "NestJS", color: "text-red-500" },
+        { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
+        { icon: SiGooglegemini, name: "Gemini AI", color: "text-purple-400" },
+        { icon: SiGooglecalendar, name: "Google Calendar", color: "text-blue-500" },
+        { icon: SiDigitalocean, name: "DigitalOcean", color: "text-cyan-500" }
       ],
-      image: `${import.meta.env.BASE_URL}projects/nova-pm.png`,
-      githubUrl: "https://github.com/Chikuu98/nova-pm",
-      liveUrl: "https://nova-pm.demo.chiranj.me",
+      image: `${import.meta.env.BASE_URL}projects/fitsmart.png`,
+      liveUrl: "https://fitsmart.chiranj.dev/",
       features: [
-        "Real-time interactive Kanban board",
-        "Collaborative documents workspace",
-        "Agile sprint velocity tracking charts",
-        "Team messaging and activity stream",
-        "Integrated document attachments"
+        "AI-personalized workout and nutrition planning",
+        "Real-time member progress and metrics tracking",
+        "Mentor session booking and Community Forum",
+        "Multi-role user authentication (Member, Mentor, Admin)",
+        "Google Calendar-integrated mentorship booking system"
       ],
       status: "completed"
     },
     {
       id: 2,
-      title: "Nexus API Gateway & Analytics",
-      description: "A high-performance API gateway with rate limiting, load balancing, and a beautiful React developer analytics portal.",
-      longDescription: "Nexus is a secure, high-throughput API gateway built with NestJS and Redis. It handles route forwarding, token authorization, request rate limiting, and dynamic load balancing. It includes a beautiful React-based analytics portal showing API uptime, throughput, latency histograms, and detailed JSON access logs in real-time.",
-      category: "api",
+      title: "Surf Shark: Board Rental Management System",
+      description: "An interactive surfboard rental and inventory management system with QR scanning, real-time billing, automatic calculations, and reports.",
+      longDescription: "Surf Shark is a specialized web application engineered for surfboard rental shops to manage inventory, active rentals, and billing operations. It features integrated QR code scanning for instant board check-ins and check-outs, automated time and rate calculations, custom digital invoicing, and dynamic monthly revenue reporting dashboards. Designed to streamline beachside rental business operations.",
+      category: "web",
       technologies: [
-        { icon: SiNestjs, name: "NestJS", color: "text-red-500" },
+        { icon: FaReact, name: "React", color: "text-blue-400" },
+        { icon: FaLaravel, name: "Laravel", color: "text-red-600" },
         { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-        { icon: SiRedis, name: "Redis", color: "text-red-400" },
-        { icon: FaReact, name: "React Portal", color: "text-blue-400" },
-        { icon: SiMongodb, name: "MongoDB", color: "text-green-500" }
+        { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-400" },
+        { icon: SiMysql, name: "MySQL", color: "text-blue-600" }
       ],
-      image: `${import.meta.env.BASE_URL}projects/nexus-api.png`,
-      githubUrl: "https://github.com/Chikuu98/nexus-gateway",
+      image: `${import.meta.env.BASE_URL}projects/surfshark.png`,
+      liveUrl: "https://surf.chiranj.dev/",
       features: [
-        "Dynamic route forwarding & load balancing",
-        "JSON Web Token (JWT) authorization handler",
-        "Redis-backed rate limiting & request throttling",
-        "Interactive developer dashboard with charts",
-        "Detailed query logging & uptime monitoring"
+        "Interactive dashboard tracking active rentals and board availability",
+        "QR code integration for fast checking and identification of equipment",
+        "Real-time billing calculation based on flexible rental durations",
+        "Automated PDF or digital receipt generation for customers",
+        "Sales, inventory, and activity report generators for administration"
       ],
       status: "completed"
     },
     {
       id: 3,
-      title: "Helios Desktop Controller",
-      description: "A cross-platform system monitor and hardware analytics dashboard built with Electron, TypeScript, and Tailwind CSS.",
-      longDescription: "Helios is a sleek, modern desktop application designed for real-time hardware monitoring. Built using Electron.js and React, it polls low-level OS APIs to display animated speedometers for CPU/RAM usage, storage I/O statistics, active network adapters, and running background threads. Features include a cyberpunk glowing glassmorphic theme and widget customizability.",
-      category: "desktop",
+      title: "Attendance Tracking System",
+      description: "A high-concurrency enterprise system for real-time attendance monitoring with biometric integration and automated reporting.",
+      longDescription: "An enterprise-grade, high-concurrency attendance monitoring system designed for real-time tracking across distributed environments. Integrated with Hikvision Fingerprint Terminals, the system focuses on optimized database query performance and seamless data synchronization. Built with Laravel and Vue.js, running in Docker containers, and featuring automated reporting tools to provide management with data-driven operational insights.",
+      category: "web",
       technologies: [
-        { icon: SiElectron, name: "Electron", color: "text-cyan-400" },
-        { icon: FaReact, name: "React", color: "text-blue-400" },
-        { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-        { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-400" }
+        { icon: FaLaravel, name: "Laravel", color: "text-red-600" },
+        { icon: SiVuedotjs, name: "Vue.js", color: "text-emerald-500" },
+        { icon: SiDocker, name: "Docker", color: "text-blue-500" },
+        { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
+        { icon: SiPython, name: "Python", color: "text-yellow-500" }
       ],
-      image: `${import.meta.env.BASE_URL}projects/helios-desktop.png`,
-      githubUrl: "https://github.com/Chikuu98/helios-controller",
+      image: `${import.meta.env.BASE_URL}projects/attendance.png`,
       features: [
-        "Cross-platform support (Windows, macOS, Linux)",
-        "Real-time hardware speedometers & graphs",
-        "System resources tracking & process manager",
-        "Customizable glassmorphic dashboards",
-        "Low-level OS system metric access"
+        "Real-time biometric attendance monitoring with Hikvision integration",
+        "High-concurrency query optimization for large-scale databases",
+        "Seamless distributed data synchronization across environments",
+        "Automated reporting modules for data-driven management insights",
+        "Containerized development and deployment using Docker"
       ],
       status: "completed"
     },
     {
       id: 4,
-      title: "Apex E-Commerce Storefront",
-      description: "A modern, performant online storefront with a robust global cart state, instant sorting/filtering, and Stripe payments.",
-      longDescription: "Apex is a modern, high-speed online shopping platform. Built with React and Laravel, it includes a robust global cart state manager, custom product filters, instant text searches, secure guest checkouts, and fully integrated Stripe payment flow. The system uses MySQL for relational inventory tracking and incorporates responsive glassmorphic cards.",
+      title: "Road & Infrastructure Management System",
+      description: "Developed for the Road Development Authority (RDA) to streamline regional infrastructure planning and resource management.",
+      longDescription: "Developed for the Road Development Authority (RDA) to streamline regional infrastructure planning and resource management. The system integrates Google Maps API for interactive, real-time visualization of developed vs. underdeveloped road networks. It also features advanced modules for water supply estimation and milestone-based project progress tracking.",
       category: "web",
       technologies: [
         { icon: FaReact, name: "React", color: "text-blue-400" },
         { icon: FaLaravel, name: "Laravel", color: "text-red-600" },
         { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
-        { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-400" }
+        { icon: SiGooglemaps, name: "Google Map API", color: "text-green-500" }
       ],
-      image: `${import.meta.env.BASE_URL}projects/apex-shop.png`,
-      githubUrl: "https://github.com/Chikuu98/apex-shop",
-      liveUrl: "https://shop.demo.chiranj.me",
+      image: `${import.meta.env.BASE_URL}projects/road_infra.png`,
       features: [
-        "Responsive product catalog with grid displays",
-        "Instant multi-attribute search and filtering",
-        "Stripe payment gateway integration",
-        "Administrative portal for stock control",
-        "Dynamic cart management with persistent caching"
+        "Interactive real-time road network visualization using Google Maps API",
+        "Regional infrastructure planning and resource distribution workflows",
+        "Advanced modules for public water supply estimation",
+        "Milestone-based progress tracking and project lifecycle management"
+      ],
+      status: "completed"
+    },
+    {
+      id: 5,
+      title: "Cross-Platform Jewellery Management System",
+      description: "Engineered a specialized ERP solution to manage complex inventory, workshop workflows, and automated billing.",
+      longDescription: "A specialized cross-platform ERP solution engineered to manage complex jewellery inventory, workshop workflows, and automated billing. Built with ElectronJS, React, and TypeScript, it ensures offline reliability and data integrity with SQLite. It optimizes business operations by developing detailed sales reporting modules and artisan collaboration tools, styled elegantly with Tailwind CSS.",
+      category: "desktop",
+      technologies: [
+        { icon: SiElectron, name: "ElectronJS", color: "text-cyan-400" },
+        { icon: FaReact, name: "React", color: "text-blue-400" },
+        { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
+        { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-400" },
+        { icon: SiSqlite, name: "SQLite", color: "text-blue-400" }
+      ],
+      image: `${import.meta.env.BASE_URL}projects/jewellery.png`,
+      features: [
+        "Cross-platform desktop application compatibility using ElectronJS",
+        "Offline-reliable inventory management with robust SQLite database",
+        "Automated billing and detailed sales reporting dashboards",
+        "Artisan workflow coordination and workshop assignment tools",
+        "Polished user interface styled with Tailwind CSS"
+      ],
+      status: "completed"
+    },
+    {
+      id: 6,
+      title: "Aura: Semantic Search & Recommendation Engine",
+      description: "A high-performance microservice API powering real-time semantic query processing and content recommendation.",
+      longDescription: "Aura is a high-throughput recommendation and search microservice API. Built with NestJS and Fastify, it translates text content into high-dimensional vector embeddings, indexes them using pgvector in PostgreSQL, and conducts lightning-fast cosine similarity lookups. To cut down embedding computational costs, it implements a Redis-backed semantic cache layer, reducing average response latency by 90% for conceptually similar queries.",
+      category: "api",
+      technologies: [
+        { icon: SiNestjs, name: "NestJS", color: "text-red-500" },
+        { icon: SiFastify, name: "Fastify", color: "text-white" },
+        { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
+        { icon: SiRedis, name: "Redis Cache", color: "text-red-400" },
+        { icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-400" }
+      ],
+      image: `${import.meta.env.BASE_URL}projects/aura_api.png`,
+      features: [
+        "AI embedding processing and semantic indexing microservices",
+        "Pgvector similarity matching with optimized database indexing",
+        "Redis semantic caching layer for speed and token cost reduction",
+        "Complete OpenAPI / Swagger endpoint documentation and type-safety",
+        "Fully containerized architecture ready for distributed microservices"
       ],
       status: "completed"
     }
@@ -150,8 +193,8 @@ export const Projects = () => {
     { id: "api", name: "API Services", count: projects.filter(p => p.category === "api").length }
   ];
 
-  const filteredProjects = selectedCategory === "all" 
-    ? projects 
+  const filteredProjects = selectedCategory === "all"
+    ? projects
     : projects.filter(project => project.category === selectedCategory);
 
   const getStatusColor = (status: string) => {
@@ -188,7 +231,7 @@ export const Projects = () => {
             </span>
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
-            Explore my portfolio of web applications, desktop software, and API services. 
+            Explore my portfolio of web applications, desktop software, and API services.
             Each project represents a unique challenge and innovative solution.
           </p>
           <div className="w-32 h-1 bg-gradient-to-r from-primary-400 to-cyan-400 mx-auto rounded-full" />
@@ -206,11 +249,10 @@ export const Projects = () => {
               key={category.id}
               variants={itemVariants}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? "bg-gradient-to-r from-primary-500 to-purple-500 text-white shadow-lg"
-                  : "glass-light text-text-secondary hover:text-text-primary hover:bg-white/10"
-              }`}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category.id
+                ? "bg-gradient-to-r from-primary-500 to-purple-500 text-white shadow-lg"
+                : "glass-light text-text-secondary hover:text-text-primary hover:bg-white/10"
+                }`}
             >
               {category.name}
               <span className="ml-2 text-sm opacity-75">({category.count})</span>
@@ -250,7 +292,7 @@ export const Projects = () => {
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3 group-hover:text-primary-400 transition-colors">
                     {project.title}
@@ -258,7 +300,7 @@ export const Projects = () => {
                   <p className="text-text-secondary mb-4 line-clamp-2">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.slice(0, 3).map((tech, index) => (
                       <div key={index} className="flex items-center gap-1 text-xs bg-white/5 px-2 py-1 rounded-full">
@@ -272,7 +314,7 @@ export const Projects = () => {
                       </div>
                     )}
                   </div>
-                  
+
                   <div className="flex gap-3">
                     {project.githubUrl && (
                       <button
@@ -340,13 +382,13 @@ export const Projects = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="p-8">
                   <h2 className="text-3xl font-bold mb-4">{selectedProject.title}</h2>
                   <p className="text-text-secondary mb-6 leading-relaxed">
                     {selectedProject.longDescription}
                   </p>
-                  
+
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold mb-3">Technologies Used</h3>
                     <div className="flex flex-wrap gap-3">
@@ -358,7 +400,7 @@ export const Projects = () => {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold mb-3">Key Features</h3>
                     <ul className="space-y-2">
@@ -370,7 +412,7 @@ export const Projects = () => {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="flex gap-4">
                     {selectedProject.githubUrl && (
                       <button
