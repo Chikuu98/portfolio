@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaReact, FaLaravel } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss, SiNestjs, SiMysql, SiElectron, SiDigitalocean, SiGooglecalendar, SiGooglegemini, SiVuedotjs, SiDocker, SiPython, SiGooglemaps, SiSqlite, SiRedis, SiFastify, SiPostgresql } from "react-icons/si";
+import { SiTypescript, SiTailwindcss, SiNestjs, SiMysql, SiElectron, SiDigitalocean, SiGooglecalendar, SiGooglegemini, SiVuedotjs, SiDocker, SiPython, SiGooglemaps, SiSqlite, SiRedis, SiFastify, SiPostgresql, SiN8N } from "react-icons/si";
 
 interface Project {
   id: number;
@@ -183,7 +183,30 @@ export const Projects = () => {
         "Fully containerized architecture ready for distributed microservices"
       ],
       status: "completed"
-    }
+    },
+    {
+      id: 7,
+      title: "Gepala Homes Company Official Web Site",
+      description: "The official website for Gepala Homes, a leading provider of premium prefabricated homes.",
+      longDescription: "The official website for Gepala Homes, a leading provider of premium prefabricated homes. A modern marketing platform built with React and TypeScript, showcasing 6 distinct home designs with detailed specifications, transparent pricing, and interactive 360° visuals. The site integrates a seamless WhatsApp chat for instant customer inquiries and features a robust n8n-powered backend for automated workflow management.",
+      category: "web",
+      technologies: [
+        { icon: FaReact, name: "React", color: "text-blue-400" },
+        { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
+        { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-cyan-400" },
+        { icon: SiN8N, name: "n8n", color: "text-blue-400" },
+      ],
+      image: `${import.meta.env.BASE_URL}projects/gepala.png`,
+      liveUrl: "https://gepala.lk/",
+      features: [
+        "Showcases 6 premium modular home designs with detailed specifications and transparent pricing.",
+        "User-friendly interface with modern design and smooth navigation for easy exploration of home designs.",
+        "Integrated WhatsApp chat for instant inquiries and direct communication with the sales team.",
+        "High-quality visuals with 360° rotation and video demonstrations for immersive product experience.",
+        "SEO-optimized structure with clean code and fast loading times for optimal search engine visibility."
+      ],
+      status: "completed"
+    },
   ];
 
   const categories = [
