@@ -188,7 +188,7 @@ export const Projects = () => {
       id: 7,
       title: "Gepala Homes Company Official Web Site",
       description: "The official website for Gepala Homes, a leading provider of premium prefabricated homes.",
-      longDescription: "Aura is a high-throughput recommendation and search microservice API. Built with NestJS and Fastify, it translates text content into high-dimensional vector embeddings, indexes them using pgvector in PostgreSQL, and conducts lightning-fast cosine similarity lookups. To cut down embedding computational costs, it implements a Redis-backed semantic cache layer, reducing average response latency by 90% for conceptually similar queries.",
+      longDescription: "The official website for Gepala Homes, a leading provider of premium prefabricated homes. A modern marketing platform built with React and TypeScript, showcasing 6 distinct home designs with detailed specifications, transparent pricing, and interactive 360° visuals. The site integrates a seamless WhatsApp chat for instant customer inquiries and features a robust n8n-powered backend for automated workflow management.",
       category: "web",
       technologies: [
         { icon: FaReact, name: "React", color: "text-blue-400" },
