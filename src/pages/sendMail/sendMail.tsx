@@ -153,7 +153,7 @@ export const SendMail: React.FC = () => {
                   </div>
                   <div className="flex-grow min-w-0">
                     <p className="text-text-muted text-xs uppercase tracking-wider">Email</p>
-                    <p className="text-text-primary font-medium text-sm md:text-base break-all">chiranjonline@gmail.com</p>
+                    <p className="text-text-primary font-medium text-sm md:text-base break-all">ask.chiran@gmail.com</p>
                   </div>
                 </motion.div>
 
