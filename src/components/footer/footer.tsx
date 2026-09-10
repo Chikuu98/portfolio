@@ -26,8 +26,8 @@ export const Footer = () => {
     {
       icon: FaEnvelope,
       label: "Email",
-      value: "chiranjonline@gmail.com",
-      href: "mailto:chiranjonline@gmail.com"
+      value: "ask.chiran@gmail.com",
+      href: "mailto:ask.chiran@gmail.com"
     },
     {
       icon: FaPhone,
